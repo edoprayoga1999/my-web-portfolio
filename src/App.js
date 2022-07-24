@@ -6,50 +6,53 @@ import github from './assets/images/github.svg'
 import { profile, portfolio, skills } from './data'
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.min.js";
-
+import "./App.css"
 export default function App() {
   const data = {
     profile,
     portfolio,
     skills
   }
+  const scrollTo = (target) => {
+    document.getElementById(target).scrollIntoView();
+  }
   useEffect(() => {
     document.title = 'Edo Prayoga - Personal Website'
   }, [])
   return (
     <div className='container-fluid d-flex flex-column align-items-center' style={{ padding: '0px', background: '#041F31' }}>
-      <nav className='d-flex align-items-center' style={{ width: '90%', padding: '30px 0px'}}>
+      <header className='d-flex align-items-center' style={{ width: '90%', padding: '30px 0px'}}>
         <p className='m-0' style={{ color: '#BDEBEA' }}>Home</p>
-        <p style={{ color: '#BDEBEA', margin: '0px 80px 0px auto' }}>Project</p>
-        <button style={{ padding: '12px 20px', background: 'linear-gradient(90deg, #00F5A0 0%, #00D9F5 100%)', borderRadius: '6px' }}>
+        <p onClick={() => scrollTo('project')} style={{ color: '#BDEBEA', margin: '0px 80px 0px auto', cursor: 'pointer' }}>Project</p>
+        <button onClick={() => scrollTo('contact')} style={{ padding: '12px 20px', background: 'linear-gradient(90deg, #00F5A0 0%, #00D9F5 100%)', borderRadius: '6px' }}>
           Contact
         </button>
-      </nav>
+      </header>
       {/* Main Section */}
       <section className='d-flex align-items-center' style={{ width: '90%', padding: '100px 0px', marginBottom: '130px' }}>
-        <div className='d-flex flex-column w-50' style={{ paddingRight: '80px' }}>
+        <div className='d-flex flex-column w-50' id='div1' style={{ paddingRight: '80px' }}>
           <span style={{ fontSize: '20px', lineHeight: '23px', color: '#D7E5EC' }}>
             {data.profile.role}
           </span>
-          <span style={{ marginBottom: '10px', fontSize: '72px', fontWeight: '600', background: 'linear-gradient(90deg, #00F5A0 0%, #00D9F5 100%)', WebkitTextFillColor: 'transparent', WebkitBackgroundClip: 'text' }}>
+          <span id='fullname'>
             {data.profile.fullname}
           </span>
-          <p style={{ color: '#BDEBEA', letterSpacing: '0.04em' }}>
+          <p id='bio'>
             {data.profile.bio}
           </p>
           <div className='d-flex'>
-            <button style={{ padding: '12px 20px', background: 'linear-gradient(90deg, #00F5A0 0%, #00D9F5 100%)', borderRadius: '6px' }}>
-              Contact Me
+            <button onClick={() => scrollTo('contact')} style={{ padding: '12px 20px', background: 'linear-gradient(90deg, #00F5A0 0%, #00D9F5 100%)', borderRadius: '6px' }}>
+              Contact
             </button>
           </div>
         </div>
-        <div className='d-flex w-50 justify-content-end'>
-          <img src={profileImage} alt='Profile' />
+        <div className='d-flex w-50 justify-content-end' id="image-div">
+          <img src={profileImage} id="image" alt='Profile' />
         </div>
       </section>
       {/* About me */}
       <section className='d-flex' style={{ width: '90%', marginBottom: '130px' }}>
-        <div className='d-flex flex-column w-75'>
+        <div className='d-flex flex-column w-75' id='about-div'>
           <span style={{ fontSize: '24px', fontWeight: '600', color: '#BDEBEA', marginBottom: '20px' }}>
             About me
           </span>
@@ -59,7 +62,7 @@ export default function App() {
         </div>
       </section>
       {/* Project portfolio */}
-      <section className='d-flex flex-column' style={{ width: '90%', marginBottom: '130px' }}>
+      <section className='d-flex flex-column' id='project' style={{ width: '90%', marginBottom: '130px' }}>
         <span style={{ fontSize: '24px', fontWeight: '600', color: '#BDEBEA', marginBottom: '20px' }}>
           My project
         </span>
@@ -120,39 +123,34 @@ export default function App() {
           )) : 'No Skill'}
         </div>
       </section>
-      <section className='d-flex flex-column align-items-center' style={{ width: '20%' }}>
-        <div className='d-flex align-items-center w-100' style={{ marginBottom: '40px' }}>
-          <div className='d-flex flex-column align-items-center'>
+      <footer className='d-flex flex-column align-items-center w-100' id='contact'>
+        <div className='d-flex align-items-center w-25' id='contact-div'>
+          <div className='d-flex flex-column align-items-center' style={{ cursor: 'pointer' }} onClick={() => window.location = 'mailto:edoprayoga.se@gmail.com'}>
             <img src={gmail} alt='gmail' style={{ marginBottom: '5px' }} />
             <span style={{ fontSize: '12px', fontWeight: '400', letterSpacing: '0.12em', color: '#BDEBEA' }}>
               GMAIL
             </span>
           </div>
-          <div className='d-flex flex-column align-items-center' style={{ marginLeft: 'auto', marginRight: 'auto' }}>
+          <div className='d-flex flex-column align-items-center' style={{ marginLeft: 'auto', marginRight: 'auto', cursor: 'pointer' }} onClick={() => window.open('https://www.linkedin.com/in/edoprayoga/','_blank')}>
             <img src={linkedin} alt='linkedin' style={{ marginBottom: '5px' }} />
             <span style={{ fontSize: '12px', fontWeight: '400', letterSpacing: '0.12em', color: '#BDEBEA' }}>
               LINKEDIN
             </span>
           </div>
-          <div className='d-flex flex-column align-items-center'>
+          <div className='d-flex flex-column align-items-center' style={{ cursor: 'pointer' }} onClick={() => window.open('https://github.com/edoprayoga1999', '_blank')}>
             <img src={github} alt='github' style={{ marginBottom: '5px' }} />
             <span style={{ fontSize: '12px', fontWeight: '400', letterSpacing: '0.12em', color: '#BDEBEA' }}>
               GITHUB
             </span>
           </div>
         </div>
-        <div className='d-flex align-items-center w-50' style={{ marginBottom: '40px' }}>
-          <span style={{ fontSize: '14px', fontWeight: '400', color: '#BDEBEA' }}>
-            Project
-          </span>
-          <span style={{ fontSize: '14px', fontWeight: '400', color: '#BDEBEA', marginLeft: 'auto' }}>
-            Contact
-          </span>
-        </div>
-        <span style={{ fontSize: '14px', fontWeight: '400', letterSpacing: '0.04em', color: '#BDEBEA', marginBottom: '40px' }}>
+        <span id='copyright-text'>
+          Whatsapp / Telp: <a href='https://wa.me/6281268490252' style={{ textDecoration: 'none' }} >+62-812-6849-0252</a>
+        </span>
+        <span id='copyright-text' style={{ marginBottom: '30px' }}>
           Copyright © 2022 Edo Prayoga
         </span>
-      </section>
+      </footer>
     </div>
   )
 }

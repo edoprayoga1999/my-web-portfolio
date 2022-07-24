@@ -63,7 +63,7 @@ export const portfolio = [
     image: 'tukushop.png',
     description: 'TukuShop is an online store application where you can register as a buyer and/or seller. Features for sellers include creating products and deleting products. Features for shoppers are search for product, buy product, and cancel product purchase.',
     demo: 'https://bit.ly/TukuShopApp',
-    source_code: 'https://github.com/edoprayoga1999/TukuShop-app-frontend',
+    source_code: 'https://github.com/HyperCarry-Team/TukuShop-app-frontend',
     tech_stack: [
       'React.js',
       'Node.js',
