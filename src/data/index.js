@@ -108,6 +108,10 @@ export const skills = [
     image: 'postgresql.png'
   },
   {
+    name: 'MYSQL',
+    image: 'mysql.png'
+  },
+  {
     name: 'REDUX',
     image: 'redux.png'
   },
@@ -118,5 +122,13 @@ export const skills = [
   {
     name: 'BOOTSTRAP',
     image: 'bootstrap.png'
+  },
+  {
+    name: 'ANT DESIGN',
+    image: 'antd.png'
+  },
+  {
+    name: 'ELASTICSEARCH',
+    image: 'elastic.svg'
   }
 ]
