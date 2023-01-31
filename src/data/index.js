@@ -89,11 +89,11 @@ export const skills = [
   },
   {
     name: "JAVA",
-    image: "java.png"
+    image: "BA68A603-0EDE-42D4-88D1-CDB1531587DF.png"
   },
   {
     name: "PHP",
-    image: "php.png"
+    image: "9960C749-9E04-4F82-8C7B-11C1C223A983.png"
   },
   {
     name: 'REACT JS',
