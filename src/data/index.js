@@ -88,6 +88,14 @@ export const skills = [
     image: 'javascript.png'
   },
   {
+    name: "JAVA",
+    image: "java.png"
+  },
+  {
+    name: "PHP",
+    image: "php.png"
+  },
+  {
     name: 'REACT JS',
     image: 'reactjs.png'
   },
