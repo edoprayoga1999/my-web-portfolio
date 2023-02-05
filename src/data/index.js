@@ -88,16 +88,16 @@ export const skills = [
     image: 'javascript.png'
   },
   {
-    name: "JAVA",
-    image: "BA68A603-0EDE-42D4-88D1-CDB1531587DF.png"
-  },
-  {
     name: "PHP",
-    image: "9960C749-9E04-4F82-8C7B-11C1C223A983.png"
+    image: "php.png"
   },
   {
     name: 'REACT JS',
     image: 'reactjs.png'
+  },
+  {
+    name: 'VUE JS',
+    image: 'vuejs.png'
   },
   {
     name: 'NEXT JS',
