@@ -13,7 +13,7 @@ export const portfolio = [
     source_code: 'https://github.com/edoprayoga1999/foodrecipe-fe',
     tech_stack: [
       'React.js',
-      'Node.js',
+      'Redux',
       'Express.js',
       'PostgreSQL'
     ]
@@ -26,7 +26,7 @@ export const portfolio = [
     source_code: 'https://github.com/A-RED-Team/ankasa-ticketing-frontend',
     tech_stack: [
       'React.js',
-      'Node.js',
+      'Redux',
       'Express.js',
       'PostgreSQL'
     ]
@@ -39,7 +39,6 @@ export const portfolio = [
     source_code: 'https://github.com/edoprayoga1999/Hirejob-app',
     tech_stack: [
       'Next.js',
-      'Node.js',
       'Express.js',
       'PostgreSQL'
     ]
@@ -52,7 +51,6 @@ export const portfolio = [
     source_code: 'https://github.com/edoprayoga1999/Telegram-Chatting-App',
     tech_stack: [
       'React.js',
-      'Node.js',
       'Express.js',
       'PostgreSQL',
       'Socket.io'
@@ -66,10 +64,23 @@ export const portfolio = [
     source_code: 'https://github.com/HyperCarry-Team/TukuShop-app-frontend',
     tech_stack: [
       'React.js',
-      'Node.js',
       'Express.js',
+      'Redux',
       'PostgreSQL',
       'Socket.io'
+    ]
+  },
+  {
+    title: 'Edo Movies - Movie List',
+    image: 'edomovies.png',
+    description: `Edo Movies is movie list website, where you can easily search and find information about your favorite movies.
+Once you have found your desired movie, you can click on it to view detailed information about the movie, including its synopsis, cast, director, ratings, and reviews.
+Our website is updated regularly, so you can stay up - to - date with the latest movie releases and news.`,
+    demo: 'https://bit.ly/EdoMovies',
+    source_code: 'https://github.com/edoprayoga1999/Edo-Movies',
+    tech_stack: [
+      'React.js',
+      'TypeScript'
     ]
   },
 ]
